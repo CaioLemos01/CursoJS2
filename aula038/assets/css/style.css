@@ -1,0 +1,30 @@
+:root {
+    --background_color: #8a1616;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background_color);
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    border-radius: 10px;
+    text-indent: 5px;
+}
+
+.container > p {
+    padding: 10px;
+    margin: 20px 0;
+}

@@ -3,6 +3,10 @@
 :root {
     --background_color: #3a3a3a;
     --title_color: #fff;
+    --stopwatch_color: #fff;
+    --stopwatch_paused_color: #bd0000;
+    --button_color: #555555;
+    --button_hover_color: #636363;
 }
 
 * {
@@ -29,8 +33,40 @@ h1 {
     justify-content: center;
     flex-direction: column;
     margin: auto;
-    background-color: #fff;
+    background-color: #000;
     width: 40vw;
     height: 70vh;
     border-radius: 20px 0;
+}
+
+#stopwatch {
+    margin-top: 90px;
+    color: var(--stopwatch_color);
+    font-size: 5em;
+}
+
+#buttons {
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.buttons {
+    margin: 10px;
+    padding: 6px;
+    font-size: 2.6em;
+    font-weight: 600;
+    background-color: var(--button_color);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.buttons:hover {
+    background-color: var(--button_hover_color);
+    transform: scale(1.01);
+}
+
+.buttons:active {
+    color: #fff;
 }

@@ -3,6 +3,8 @@
 :root {
     --background_color: #3a3a3a;
     --title_color: #fff;
+    --button_color: #5c5c5c;
+    --button_color_active: #636363;
 }
 
 * {
@@ -25,8 +27,8 @@ h1 {
 
 #container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    text-indent: 10px;
     flex-direction: column;
     margin: auto;
     background-color: #fff;
@@ -34,3 +36,43 @@ h1 {
     height: 70vh;
     border-radius: 20px 0;
 }
+
+.form {
+    margin-top: 10px;
+}
+
+label {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+input {
+    font-size: 1.4em;
+}
+
+.add {
+    font-weight: 600;
+    font-size: 1.4em;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    background-color: var(--button_color);
+    color: var(--title_color);
+}
+
+.add:hover {
+    background-color: var(--button_color_active);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: left;
+    margin-top: 8px;
+}
+
+
+
+
