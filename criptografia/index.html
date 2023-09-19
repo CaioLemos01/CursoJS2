@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--Criptografar-->
+    <input type="text" id="inputText" placeholder="Digite seu texto sensível">
+    <button button onclick="criptografar()">Criptografar</button>
+    <p>Texto criptografado: <span id="textoCriptografado"></span></p>
+    
+    <!--Descriptografar-->
+    <input type="text" id="inputText2" placeholder="Digite seu texto criptografado">
+    <button button onclick="descriptografar()">Descriptografar</button>
+    <p>Texto descriptografado: <span id="textoDescriptografado"></span></p>
+    
+    <script>
+        function criptografar() {
+            const texto = document.getElementById('inputText').value;
+            const chave = 'chaveDeCriptografia'; // Chave de criptografia (mantenha em segredo)
+            const textoCriptografado = CryptoJS.AES.encrypt(texto, chave).toString();
+            document.getElementById('textoCriptografado').innerText = textoCriptografado;
+        }
+
+        function descriptografar() {
+            const textoCriptografado = document.getElementById('inputText2').value;
+            const chave = 'chaveDeCriptografia'; // Chave de criptografia (mantenha em segredo)
+            const bytes = CryptoJS.AES.decrypt(textoCriptografado, chave);
+            const textoDescriptografado = bytes.toString(CryptoJS.enc.Utf8);
+            document.getElementById('textoDescriptografado').innerText = textoDescriptografado;
+        }
+    </script>
+</body>
+</html>
